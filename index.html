@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>3D Flip login and registration form</title>
+	<link rel="stylesheet" href="style.css">
+		
+</head>
+<body>
+<div class="container">
+<div class="card">
+<div class="inner-box" id="card">
+<div class="card-front">
+<h2>LOGIN</h2>
+<form action="login.php" method="post">
+<input type="email" class="input-box" placeholder="Your Email Id" name="email" required>
+<input type="password" class="input-box" placeholder="password" name="password" required>
+<button type="Submit" class="submit-btn">Submit</button>
+<input type="checkbox"><span>Remember Me</span>
+</form>	
+<button type="button" class="btn" onclick="openRegister()">I'm New Here</button>
+<a href="">Forgot Password</a>
+</div>
+<div class="card-back">
+<h2>REGISTER</h2>
+<form>
+<input type="text" class="input-box" placeholder="Your Name" required>
+<input type="email" class="input-box" placeholder="Your Email Id" required>
+<input type="password" class="input-box" placeholder="password" required>
+<button type="Submit" class="submit-btn">Submit</button>
+<input type="checkbox"><span>Remember Me</span>
+</form>	
+<button type="button" class="btn" onclick="openLogin()">I've an account</button>
+<a href="">Forgot Password</a>					
+</div>				
+</div>
+</div>
+</div>
+<script>
+	var car = document.getElementById("card");
+	function openRegister() {
+		card.style.transform = "rotatey(-180deg)";
+	}
+	function openLogin() {
+		card.style.transform = "rotatey(0deg)";
+	}
+</script>
+</body>
+</html>
